@@ -1,0 +1,196 @@
+.horizontalBox {
+    background-color: rgb(221, 204, 205);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: relative;
+    z-index: 1;
+}
+
+.menuBox {
+    margin: auto;
+    height: 150px;
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    display: inline;
+    font-size: 25px;
+}
+
+li a {
+    display: block;
+    color: black;
+    padding: 10px 5px;
+    text-decoration: none;
+}
+
+li a:hover, li a:active {
+    background-color: rgb(228, 214, 215);
+    cursor: pointer;
+}
+
+.formBox {
+    width: 100%;
+}
+
+.searchBox {
+    width: 100%;
+}
+
+::ng-deep .mat-select-content{
+    width:2000px;
+    background-color: red;
+    font-size: 10px;   
+}
+
+.searchLabel {
+    vertical-align: middle;
+    color: black;
+    font-size: 25px;
+    padding: 55px 60px;
+    padding-left: 40px;
+    text-align: left;
+}
+
+.searchLabel i {
+    vertical-align: middle;
+    font-size: 40px;
+}
+
+.searchInput {
+    color: black;
+    font-size: 25px;
+    padding-left: 40px;
+}
+
+.autoCompleteBox {
+    height: 300px;
+}
+
+.optionBox {
+    height: 120px;
+    margin-top: 10px;
+}
+
+.elementBox {
+    font-size: 20px;
+}
+
+.elementBox:hover + li a {
+    display: block;
+}
+
+.elementBox span {
+    margin-left: 20px;
+}
+
+.elementBox small {
+    font-size: 15px;
+}
+
+.categoryMenuBox {
+    width: 20%;
+    float: left;
+    font-size: 30px;
+}
+
+.categoryMenuBox a {
+    padding: 55px 60px;
+    padding-left: 35px;
+    text-align: left;
+}
+
+.categoryMenuBox ul {
+    padding-right: 0px;
+}
+
+.categoryMenuBox ul a {
+    text-align: left;
+}
+
+.titleBox {
+    width: 20%;
+    margin-left: 20%;
+    margin-right: 20%;
+    float: left;
+}
+
+.titleBox a {
+    padding: 13px 10px;
+    font-size: 50px;
+    text-align: center;
+}
+
+.loginBox {
+    width: 20%;
+    float: right;
+    font-size: 25px;
+}
+
+.loginBox a {
+    padding: 65px 70px;
+    padding-left: 0px;
+    text-align: right;
+}
+
+.loginBox ul {
+    padding-right: 0px;
+}
+
+.loginBox ul a {
+    text-align: right;
+}
+
+.profileBox {
+    width: 20%;
+    float: right;
+    font-size: 25px;
+}
+
+.profileBox img {
+    vertical-align: middle;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+.profileBox a {
+    padding: 45px 0px;
+    padding-left: 5%;
+    padding-right: 10%;
+    text-align: right;
+}
+
+.profileBox ul {
+    padding-right: 0px;
+}
+
+.profileBox ul a {
+    text-align: right;
+}
+
+li:hover > ul {
+    display: block;
+}
+
+li > ul {
+    display: none;
+    background-color: rgb(221, 204, 205);
+}
+
+li > ul a {
+    text-align: left;
+    font-size: 25px;
+    padding: 20px 40px;
+    background-color: rgb(221, 204, 205);
+}
+
+li > ul a:hover, li > ul a:active {
+    background-color: rgb(228, 214, 215);
+    cursor: pointer;
+}

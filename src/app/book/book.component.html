@@ -1,0 +1,23 @@
+<div class="bookBox">
+    <div class="coverBox"><img [src]="coverImage" width="330" height="450"/>
+        <div class="buttonBox">
+            <button class="buttonClass" (click)="downloadPDF()">Pobierz PDF</button>
+            <button class="buttonClass" (click)="addToFavorite()">Dodaj do ulubionych</button> 
+        </div>
+    </div>
+    <div class="dataBox">
+        <h1>"{{book.title}}"</h1>
+        <div *ngFor="let category of book.categories" class="categoryBox">
+            <h3>{{category.name}}</h3>
+        </div>
+        <h2>Autor: {{book.author}}</h2>
+        <h2>Data Wydania: {{book.releaseDate}}</h2>
+        <h2>Data Dodania na stronę: {{book.addDate}}</h2>
+        <h4>{{book.description}}</h4>
+    </div>
+</div>
+
+<footer class="fotterBox">
+    <h1>@Copyright 2021-2022.</h1>
+    <h1>All rights reserved. Powered by the Angular CLI 1.2.0 and Typescript</h1>
+</footer>

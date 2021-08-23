@@ -1,0 +1,106 @@
+.mainBox {
+    position: absolute;
+    z-index: -1 !important;
+    width: 100%;
+    height: 80%;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+.centerBox {
+    position: absolute;
+    z-index: -1 !important;
+    background-color: rgb(221, 204, 205);
+    width: 700px;
+    height: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+.formBox {
+    display: inline-block;
+    text-align: center;
+    width: 90%;
+    height: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.formBox p {
+    font-size: 45px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.formGroup {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.matForm {
+    width: 80%;
+}
+
+.mat-error {
+    text-align: center;
+}
+
+::ng-deep.mat-focused .mat-form-field-label {
+    color: black !important;
+}
+  
+::ng-deep.mat-form-field-ripple {
+    background-color: black !important;
+}
+
+::ng-deep.mat-error {
+    font-size: 18px;
+}
+
+.hideButton {
+    background-color: rgba(0, 0 ,0 ,0);
+    font-size: 20px;
+    border: 0;
+    cursor: pointer;
+}
+
+.hideButton:focus {
+    outline: 0;
+    cursor: pointer;
+}
+
+.formGroup input {
+    text-align: center;
+}
+
+.buttonClass {
+    width: 40%;
+    font-size: 20px;
+    padding: 15px;
+    margin: 10px;
+    margin-top: 30px;
+    margin-left: 10px;
+    color: black;
+    background-color: rgb(163, 170, 168);
+    border: 0;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.buttonClass:hover {
+    background-color: rgb(144, 154, 154);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.buttonClass:focus {
+    outline: 0;
+    cursor: pointer;
+}

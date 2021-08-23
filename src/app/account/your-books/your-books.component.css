@@ -1,0 +1,46 @@
+.mainBox {
+    position: relative;
+    vertical-align: middle;
+    margin-top: 10px;
+}
+
+.booksBox {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.bookBox {
+    text-align: left;
+    vertical-align: middle;
+    display: inline-block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.coverBox {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.coverBox:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.bookBox h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 30px;
+    color: black;
+}
+
+.bookBox h2 {
+    text-align: center;
+    margin-top: -10px;
+    font-size: 20px;
+    color: black;
+}

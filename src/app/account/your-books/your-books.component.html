@@ -1,0 +1,9 @@
+<div class="mainBox">
+    <div class="booksBox">
+        <div class="bookBox" *ngFor="let book of books;">
+            <div class="coverBox"><img [src]="convertCover(book.coverImage)" width="220" height="330" routerLink="../../books/{{book.bookId}}"/></div>
+            <h1>{{book.title}}</h1>
+            <h2>{{book.author}}</h2>
+        </div>
+    </div>
+</div>

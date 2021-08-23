@@ -1,0 +1,34 @@
+<div class="mainBox">
+    <div class="headBox">
+        <div class="titleBox">
+            <h1>T O P</h1>
+        </div>
+    </div>
+    <div class="booksBox">
+        <div class="bookBox" *ngFor="let book of booksListByTitle; let i = index">
+            <div class="coverBox"><img [src]="booksCoverListByTitle[i]" width="220" height="330" routerLink="books/{{book.bookId}}"/></div>
+            <h1>{{book.title}}</h1>
+            <h2>{{book.author}}</h2>
+        </div>
+    </div>
+</div>
+
+<div class="mainBox">
+    <div class="headBox">
+        <div class="titleBox" style="background-color: rgb(163, 170, 170);">
+            <h1>Ostatnio Dodane</h1>
+        </div>
+    </div>
+    <div class="booksBox">
+        <div class="bookBox" *ngFor="let book of booksListByAddDate; let i = index">
+            <div class="coverBox"><img [src]="booksCoverListByAddDate[i]" width="220" height="330" routerLink="books/{{book.bookId}}"/></div>
+            <h1>{{book.title}}</h1>
+            <h2>{{book.author}}</h2>
+        </div>
+    </div>
+</div>
+
+<footer class="fotterBox">
+    <h1>@Copyright 2021-2022.</h1>
+    <h1>All rights reserved. Powered by the Angular CLI 1.2.0 and Typescript</h1>
+</footer>

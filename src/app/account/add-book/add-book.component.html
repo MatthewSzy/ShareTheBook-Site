@@ -1,0 +1,74 @@
+<div class="mainBox">
+    <div class="centerBox">
+        <div class="formBox">
+            <p>DODAJ KSIĄŻKĘ</p>
+            <form [formGroup]="form" (ngSubmit)="addBook()">
+                <div class="bookFormTitle">
+                    <mat-form-field appearance="legacy" class="matFormTitle">
+                        <mat-label>Tytuł</mat-label>
+                        <input matInput formControlName="title" autocomplete="off">
+                        <mat-error *ngIf="form.controls.title.invalid">{{this.invalidTitle}}</mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="bookFormAuthor">
+                    <mat-form-field appearance="legacy" class="matFormAuthor">
+                        <mat-label>Autor</mat-label>
+                        <input matInput formControlName="author" autocomplete="off">
+                        <mat-error *ngIf="form.controls.author.invalid">{{this.invalidAuthor}}</mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="bookFormReleaseDate">
+                    <mat-form-field appearance="legacy" class="matFormReleaseDate">
+                        <mat-label>Data Wydania</mat-label>
+                        <input matInput placeholder="rok-mieś-dzień" formControlName="releaseDate" autocomplete="off">
+                        <mat-error *ngIf="form.controls.releaseDate.invalid">{{this.invalidReleaseDate}}</mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="bookFormDescription">
+                    <mat-form-field appearance="legacy" class="matFormDescription">
+                        <mat-label>Opis</mat-label>
+                        <textarea matInput formControlName="description" autocomplete="off"></textarea>
+                        <mat-error *ngIf="form.controls.description.invalid">{{this.invalidDescription}}</mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="bookFormCategories">
+                    <mat-form-field appearance="legacy" class="matFormCategories">
+                        <mat-label>Kategorie</mat-label>
+                        <mat-select class="matSelect" (selectionChange)="addCategory($event.value)">
+                            <mat-option *ngFor="let category of categories" [value]="category" class="matOption">{{category}}</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div class="bookFormSelectedCategories">
+                    <div *ngFor="let selectedCategory of selectedCategories" class="categoryBox">
+                        <h3>{{selectedCategory}} <a class="removeBox" (click)="removeCategory(selectedCategory)">X</a></h3>
+                    </div>
+                </div>
+                <button class="buttonClass">
+                    Dodaj Książkę
+                </button>
+            </form>
+            <div class="filesBox">
+                <div class="booksListBox">
+                    <mat-form-field appearance="legacy" class="matFormBooks">
+                        <mat-label>Książki</mat-label>
+                        <mat-select class="matSelect" (selectionChange)="getBookId($event.value)">
+                            <mat-option [value]="book" *ngFor="let book of books" class="matOption">{{book.title}}</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div class="coverBox">
+                    <p>DODAJ OKŁADKĘ</p>
+                    <input type="file" accept="image/*" (change)="onCoverSelected($event)">
+                </div>
+                <div class="fileBox">
+                    <p>DODAJ PLIK PDF</p>
+                    <input type="file" accept=".pdf*" (change)="onFileSelected($event)">
+                </div>
+                <button (click)="addFiles()" class="buttonClass">
+                    Dodaj Pliki
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

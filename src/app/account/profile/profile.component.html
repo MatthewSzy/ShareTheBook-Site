@@ -1,0 +1,38 @@
+<div class="mainBox">
+    <div class="centerBox">
+        <div class="formBox">
+            <p>EDYTUJ DANE</p>
+            <form [formGroup]="form" (ngSubmit)="updateUsername()">
+                <div class="infoBox">
+                    <div class="formGroup">
+                        <mat-form-field appearance="legacy" class="matForm">
+                            <mat-label>Nazwa użytkownika</mat-label>
+                            <input matInput formControlName="username" autocomplete="off">
+                            <mat-error *ngIf="form.controls.username.invalid">{{this.invalidUsername}}</mat-error>
+                        </mat-form-field>
+                        <mat-form-field appearance="legacy" class="matForm">
+                            <mat-label>Hasło</mat-label>
+                            <input matInput [type]="hide ? 'password' : 'text'" formControlName="password" autocomplete="off">
+                            <button class="hideButton" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                            </button>
+                            <mat-error *ngIf="form.controls.password.invalid">{{this.invalidPassword}}</mat-error>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <button class="buttonClass">
+                    Zmień nazwę użytkownika
+                </button>
+            </form>
+            <div class="photoBox">
+                <p>DODAJ ZDJĘCIE</p>
+                <input type="file" accept="image/*" (change)="onFileSelected($event)">
+                <h2 *ngIf="invalidPrint">{{invalidUpload}}</h2>
+            </div>
+            <button class="buttonClass" (click)="uploadProfileImage()">
+                Wyślij Zdjęcie
+            </button>
+        </div>
+        
+    </div>
+</div>

@@ -1,0 +1,43 @@
+<div class="mainBox">
+    <div class="centerBox">
+        <div class="formBox">
+            <p>ZAKŁADANIE KONTA</p>
+            <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                <div class="formGroup">
+                    <mat-form-field appearance="legacy" class="matForm">
+                        <mat-label>Nazwa Użytkownika</mat-label>
+                        <input matInput formControlName="username" autocomplete="off">
+                        <mat-error *ngIf="f.username.invalid">{{this.invalidUsername}}</mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="formGroup">
+                    <mat-form-field appearance="legacy" class="matForm">
+                        <mat-label>Hasło</mat-label>
+                        <input matInput [type]="hide ? 'password' : 'text'" formControlName="password" autocomplete="off">
+                        <button class="hideButton" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                        <mat-error *ngIf="f.password.invalid">{{this.invalidPassword}}</mat-error>
+                    </mat-form-field>
+                </div>  
+                <div class="formGroup">
+                    <mat-form-field appearance="legacy" class="matForm">
+                        <mat-label>Powtórz Hasło</mat-label>
+                        <input matInput [type]="hide ? 'password' : 'text'" formControlName="repeatPassword" autocomplete="off">
+                        <button class="hideButton" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                        <mat-error *ngIf="f.repeatPassword.invalid">{{this.invalidRepeatPassword}}</mat-error>
+                    </mat-form-field>
+                </div>   
+                <button class="buttonClass">
+                    Załóż konto
+                </button>
+                <button routerLink="../login" class="buttonClass">
+                    Zaloguj się
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+

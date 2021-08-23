@@ -1,0 +1,33 @@
+<div class="mainBox">
+    <div class="centerBox">
+        <table mat-table [dataSource]="usersList" class="mat-elevation-z8 demo-table">
+
+            <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef> ID </th>
+                <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+            </ng-container>
+            <ng-container matColumnDef="username">
+                <th mat-header-cell *matHeaderCellDef> NAZWA UŻYTKOWNIKA </th>
+                <td mat-cell *matCellDef="let element"> {{element.username}} </td>
+            </ng-container>
+            <ng-container matColumnDef="userRole">
+                <th mat-header-cell *matHeaderCellDef> ROLA </th>
+                <td mat-cell *matCellDef="let element"> {{element.roles[0]}} </td>
+            </ng-container>
+            <ng-container matColumnDef="adminRole">
+                <th mat-header-cell *matHeaderCellDef> ROLA </th>
+                <td mat-cell *matCellDef="let element"> {{element.roles[1]}} </td>
+            </ng-container>
+            <ng-container matColumnDef="actions">
+                <th mat-header-cell *matHeaderCellDef > NADAJ/USUŃ ROLĘ  </th>
+                <td mat-cell *matCellDef="let element">
+                    <button class="buttonClass" mat-button *ngIf="!element.roles[1]" (click)="addAdmin(element.id)">Nadaj Admina</button>
+                    <button class="buttonClass" mat-button *ngIf="element.roles[1]" (click)="deleteAdmin(element.id)">Usuń Admina</button>
+                </td>
+            </ng-container>
+          
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+    </div>
+</div>

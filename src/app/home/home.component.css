@@ -1,0 +1,73 @@
+.mainBox {
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 100px;
+    background-color: rgb(221, 204, 205);
+}
+
+.headBox {
+    width: 100%;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.titleBox {
+    vertical-align: middle;
+    text-align: center;
+    background-color: rgb(191, 145, 146);
+    float: left;
+    color: rgb(220, 220, 220);
+    padding: 10px 80px;
+    padding-top: 25px;
+    margin-top: -40px;
+}
+
+.titleBox h1 {
+    font-size: 40px;
+}
+
+.booksBox {
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+.bookBox {
+    text-align: center;
+    vertical-align: middle;
+    width: 25%;
+    display: inline-block;
+}
+
+.coverBox {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.coverBox:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.bookBox h1 {
+    margin-top: 20px;
+    font-size: 30px;
+    color: black;
+}
+
+.bookBox h2 {
+    margin-top: -10px;
+    font-size: 20px;
+    color: black;
+}
+
+.fotterBox {
+    background-color: rgb(221, 204, 205);
+    text-align: center;
+    margin-top: 50px;
+}
+
+.fotterBox h1 {
+    font-size: 20px;
+    margin-bottom: -10px;
+}
